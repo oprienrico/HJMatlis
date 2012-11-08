@@ -1,0 +1,27 @@
+# raw data
+*.dat
+*.txt
+
+# special
+*.sql
+
+#archives
+*.rar
+*.zip
+*.7z
+
+#backups
+*.bak
+
+#folders
+test/
+
+#matlab compiled or autosaved
+*.asv
+
+#system files
+Thumbs.db
+
+#others
+*.hjnote
+hj_history/
