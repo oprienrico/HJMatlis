@@ -1,5 +1,3 @@
-
-
 function fileList = lfrdir(varargin)
   %fileList = lfrdir(dirPath[, typepath])
   %List File Recursive Dir
@@ -59,7 +57,11 @@ function fileList = lfrdir(varargin)
                                                %#   that are not '.' or '..'
   for iDir = find(validIndex)                  %# Loop over valid subdirectories
     nextDir = fullfile(dirPath,subDirs{iDir});    %# Get the subdirectory path
-    fileList = [fileList; lfrdir(nextDir, varargin{end})];  %# Recursively call lfrdir with same options
+    if nargin>1
+        fileList = [fileList; lfrdir(nextDir, varargin{end})];  %# Recursively call lfrdir with same options
+    else
+        fileList = [fileList; lfrdir(nextDir)];  %# Recursively call lfrdir with same options
+    end
   end
 
 end
