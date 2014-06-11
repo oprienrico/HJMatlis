@@ -4,6 +4,14 @@ function out = hstrcmp(arg0, arg1, varargin)
 	%for example if the option specified is 'mix', it returns a matrix of bool
 	%representing when there is a match
 
+	%fix input
+	if size(arg0,2)==1
+	    arg0=arg0';
+	end
+	if size(arg1,2)==1
+	    arg1=arg1';
+	end
+    
 	if length(varargin)<1
 		out = strcmp(arg0, arg1);
 	else
