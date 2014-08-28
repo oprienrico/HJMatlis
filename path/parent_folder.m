@@ -18,5 +18,4 @@ function outpath = parent_folder(pathFolder, level)
 	end
 	
 	pos = poss(end - level+1);
-
 	outpath = pathFolder(1:pos);

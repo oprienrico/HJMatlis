@@ -48,9 +48,7 @@ function varargout = subdir(varargin)
 %   dir
 
 % Copyright 2006 Kelly Kearney
-% original submission at
-% http://www.mathworks.com/matlabcentral/fileexchange/15859-subdir--a-recursive-file-search
-% Fixed by Enrico Opri
+
 
 %---------------------------
 % Get folder and filter
@@ -72,7 +70,7 @@ else
             folder = fullfile(folder, name);
             filter = '*';
         else
-            filter = name;
+            filter=name;
         end
     else
         filter = [name ext];
